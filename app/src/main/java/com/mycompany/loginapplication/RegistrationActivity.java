@@ -35,6 +35,12 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
     }
 
     public void onClick(View v) {
+        String fna= efname.getText().toString();
+        String lna= elname.getText().toString();
+        String una= reuname.getText().toString();
+        String pas= repass.getText().toString();
+        String eml= eemail.getText().toString();
+
         switch (v.getId()) {
             case R.id.submit:
                 Intent i = new Intent(RegistrationActivity.this, LoginActivity.class);
@@ -42,8 +48,13 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
 
                 break;
             case R.id.cancel:
-                Intent in = new Intent(RegistrationActivity.this, LoginActivity.class);
-                startActivity(in);
+                efname.setText(" ");
+                elname.setText(" ");
+                reuname.setText(" ");
+                repass.setText("");
+                eemail.setText(" ");
+//                Intent in = new Intent(RegistrationActivity.this, LoginActivity.class);
+//                startActivity(in);
 
                 break;
 
